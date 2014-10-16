@@ -11,6 +11,8 @@ class Column {
     private $relationship;
     private $like;
     private $shiftDecimal;
+    private $methodGetEntity;
+    private $methodSetEntity;
  
     public function setName($name){
         $this->name = $name;
@@ -83,6 +85,20 @@ class Column {
         return $this->shiftDecimal;
     }
     
+    public function setMethodGetEntity($methodGetEntity){
+        $this->methodGetEntity = $methodGetEntity;
+        return $this;
+    }
+    public function getMethodGetEntity(){
+        return $this->methodGetEntity;
+    }
+    public function setMethodSetEntity($methodSetEntity){
+        $this->methodSetEntity = $methodSetEntity;
+        return $this;
+    }
+    public function getMethodSetEntity(){
+        return $this->methodSetEntity;
+    }
 }
 
 ?>
